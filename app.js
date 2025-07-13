@@ -21,6 +21,8 @@ mongoose.connect(dbURI)
 		console.log(error);
 	})
 
+// Middleware
+app.set('view engine', 'ejs');
 
 app.use('/', mainRoute);
 
