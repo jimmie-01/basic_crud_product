@@ -4,6 +4,7 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require("mongoose");
+const mainRoute = require('./server/routes/main_route');
 
 dotenv.config();
 
@@ -21,8 +22,6 @@ mongoose.connect(dbURI)
 	})
 
 
-app.get('/', (req, res) =>{
-	res.send('Express App Created');
-});
+app.use('/', mainRoute);
 
 app.listen(3000, 'localhost');
