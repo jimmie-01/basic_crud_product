@@ -21,8 +21,11 @@ mongoose.connect(dbURI)
 		console.log(error);
 	})
 
-// Middleware
+// Set View Engine
 app.set('view engine', 'ejs');
+
+//Middleware and static files
+app.use(express.static('public'));
 
 app.use('/', mainRoute);
 
