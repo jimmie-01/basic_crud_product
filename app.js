@@ -26,6 +26,9 @@ app.set('view engine', 'ejs');
 
 //Middleware and static files
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 app.use('/', mainRoute);
 
