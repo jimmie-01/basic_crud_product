@@ -31,5 +31,3 @@ app.use(express.json());
 
 
 app.use('/', mainRoute);
-
-app.listen(3000, 'localhost');

@@ -29,14 +29,14 @@ module.exports.get_users = async (req, res) => {
  * GET - About Page
  */
 module.exports.get_about = (req, res) => {
-	res.render('about');
+	res.render('about', { title: "About Page" });
 }
 
 /**
  * GET - Add User Page
  */
 module.exports.get_create_user = (req, res) => {
-	res.render('add_user');
+	res.render('add_user', { title: "Add User"});
 }
 
 /**
