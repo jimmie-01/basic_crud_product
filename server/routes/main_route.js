@@ -7,5 +7,6 @@ router.get('/users', Controller.get_users);
 router.get('/about', Controller.get_about);
 router.get('/user/create', Controller.get_create_user);
 router.post('/user/create', Controller.post_create_user);
+router.get('/users/:id', Controller.get_single_user);
 
 module.exports = router;

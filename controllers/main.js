@@ -64,3 +64,17 @@ module.exports.post_create_user =  async (req, res) => {
 		console.log(error);
 	}
 }
+
+/**
+ * GET- Get user details
+ */
+
+module.exports.get_single_user = async(req, res) => {
+	try {
+		const id = req.params.id;
+		const user = await User.findById(id);
+		res.status(201).render('details', { title: "User Details", user, action: 'edit' });
+	} catch (error) {
+		console.log(error);
+	};
+}
