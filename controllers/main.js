@@ -78,3 +78,18 @@ module.exports.get_single_user = async(req, res) => {
 		console.log(error);
 	};
 }
+
+/**
+ * Get - Get Page To Edit User
+ */
+
+module.exports.get_edit_user = async (req, res) => {
+	try {
+		const name = req.params.name;
+		const user = await User.findOne({ name });
+		res.status(201).render('edit', { user, title: 'Edit-User' });
+	} catch (error) {
+		console.log(error);
+	};
+};
+
