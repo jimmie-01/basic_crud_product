@@ -93,3 +93,16 @@ module.exports.get_edit_user = async (req, res) => {
 	};
 };
 
+/**
+ * POST - Submit Edited User Data
+ */
+
+module.exports.post_edit_user = async (req, res) => {
+	try {
+		const id = req.params.id;
+		const user = await User.findByIdAndUpdate({_id: id}, req.body);
+		res.status(201).redirect(`/users/${ id }`);
+	} catch (error) {
+		console.log(error);		
+	}
+}
