@@ -31,3 +31,6 @@ app.use(express.json());
 
 
 app.use('/', mainRoute);
+app.use((req, res) => {
+	res.render('404', { title: 'NotFound' });
+})
