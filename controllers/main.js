@@ -106,3 +106,17 @@ module.exports.post_edit_user = async (req, res) => {
 		console.log(error);		
 	}
 }
+
+/**
+ * POST - Delete User profile
+ */
+
+module.exports.delete_user = async(req, res) => {
+	try {
+		const name = req.params.name;
+		await User.deleteOne({ name });
+		res.status(201).redirect('/users');
+	} catch (error) {
+		console.log(error);
+	};
+}

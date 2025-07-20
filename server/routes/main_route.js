@@ -10,5 +10,6 @@ router.post('/user/create', Controller.post_create_user);
 router.get('/users/:id', Controller.get_single_user);
 router.get('/edit/:name/:action', Controller.get_edit_user);
 router.post('/edit/:id', Controller.post_edit_user);
+router.post('/users/:name', Controller.delete_user);
 
 module.exports = router;
