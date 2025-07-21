@@ -101,3 +101,35 @@ button:hover{
 	cursor: pointer;
 	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
+
+/* Create Styles*/
+.create-blog form{
+	max-width: 400px;
+	margin: 0 auto;
+}
+.create-blog input,
+.create-blog textarea{
+	display: block;
+	width: 100%;
+	margin: 5px 0;
+	padding: 8px;
+}
+.create-blog button{
+	margin-top: 10px;
+	background: crimson;
+	color: white;
+	padding: 6px;
+	border: 0;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+.create-blog button:hover{
+	background-color: rgb(7, 206, 17);
+}
+.sub{
+	text-align: center;
+}
+span{
+	font-weight: bolder;
+}
